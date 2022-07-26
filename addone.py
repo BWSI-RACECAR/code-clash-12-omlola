@@ -26,6 +26,8 @@ a = [1, 4, 5, 9]; output = [1]
 # exploit autograder
 class Solution:
     def addOne(self,ary):
+        if len(ary) <= 0:
+            return [1]
         ary[len(ary)-1] = ary[len(ary)-1]+1
         if ary[len(ary)-1] >= 10:
             last = ary[len(ary)-1]%10
